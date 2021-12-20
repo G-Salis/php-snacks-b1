@@ -38,6 +38,7 @@ $posts = [
             'text' => 'Testo post 6'
         ]
     ],
+    
 ];
 print_r(array_keys($posts));
 
@@ -45,6 +46,7 @@ $data = (array_keys($posts));
 
 
 var_dump($posts);
+var_dump($data);
 ?>
 
 <!DOCTYPE html>
@@ -58,51 +60,45 @@ var_dump($posts);
 <body>
 <div>
 <?php
+  for($j=0; $j < count($posts); $j++ ){
 
-  for($i=0; $i< count($posts['10/01/2019']); $i++){
-    echo $data[0];
-    echo ". ";
-    echo $posts["10/01/2019"][$i]["title"];
-    echo ": ";
-    echo $posts["10/01/2019"][$i]["author"];
-    echo ". ";
-    echo " - ";
-    echo $posts["10/01/2019"][$i]["text"];
-    echo "<br>";
-   
+    for($i=0; $i< count($posts[$data[$j]]); $i++){
+
+      echo $data[$j];
+      echo ". ";
+      echo $posts[$data[$j]][$i]["title"];
+      echo ": ";
+      echo $posts[$data[$j]][$i]["author"];
+      echo ". ";
+      echo " - ";
+      echo $posts[$data[$j]][$i]["text"];
+      echo "<br>";
+
+    }
   }
-  ?>
-</div>
-<div>
-<?php
-  for($i=0; $i< count($posts['10/02/2019']); $i++){
-    echo $data[1];
-    echo ". ";
-    echo $posts["10/02/2019"][$i]["title"];
-    echo ": ";
-    echo $posts["10/02/2019"][$i]["author"];
-    echo ". ";
-    echo " - ";
-    echo $posts["10/02/2019"][$i]["text"];
-    echo "<br>";
+  // for($i=0; $i< count($posts['10/02/2019']); $i++){
+  //   echo $data[1];
+  //   echo ". ";
+  //   echo $posts["10/02/2019"][$i]["title"];
+  //   echo ": ";
+  //   echo $posts["10/02/2019"][$i]["author"];
+  //   echo ". ";
+  //   echo " - ";
+  //   echo $posts["10/02/2019"][$i]["text"];
+  //   echo "<br>";
+  // }
+  // for($i=0; $i< count($posts['15/05/2019']); $i++){
+  //   echo $data[2];
+  //   echo ". ";
+  //   echo $posts["15/05/2019"][$i]["title"];
+  //   echo ": ";
+  //   echo $posts["15/05/2019"][$i]["author"];
+  //   echo ". ";
+  //   echo " - ";
+  //   echo $posts["15/05/2019"][$i]["text"];
+  //   echo "<br>";
    
-  }
-  ?>
-</div>
-<div>
-<?php
-  for($i=0; $i< count($posts['15/05/2019']); $i++){
-    echo $data[2];
-    echo ". ";
-    echo $posts["15/05/2019"][$i]["title"];
-    echo ": ";
-    echo $posts["15/05/2019"][$i]["author"];
-    echo ". ";
-    echo " - ";
-    echo $posts["15/05/2019"][$i]["text"];
-    echo "<br>";
-   
-  }
+  // }
   ?>
 </div>
 

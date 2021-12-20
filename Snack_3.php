@@ -39,7 +39,10 @@ $posts = [
         ]
     ],
 ];
-print_r(array_keys($posts[0]));
+print_r(array_keys($posts));
+
+$data = (array_keys($posts));
+
 
 var_dump($posts);
 ?>
@@ -55,8 +58,9 @@ var_dump($posts);
 <body>
 <div>
 <?php
+
   for($i=0; $i< count($posts['10/01/2019']); $i++){
-    echo (array_keys($posts));
+    echo $data[0];
     echo ". ";
     echo $posts["10/01/2019"][$i]["title"];
     echo ": ";
@@ -72,7 +76,7 @@ var_dump($posts);
 <div>
 <?php
   for($i=0; $i< count($posts['10/02/2019']); $i++){
-    echo (array_keys($posts));
+    echo $data[1];
     echo ". ";
     echo $posts["10/02/2019"][$i]["title"];
     echo ": ";
@@ -88,7 +92,7 @@ var_dump($posts);
 <div>
 <?php
   for($i=0; $i< count($posts['15/05/2019']); $i++){
-    echo (array_keys($posts));
+    echo $data[2];
     echo ". ";
     echo $posts["15/05/2019"][$i]["title"];
     echo ": ";

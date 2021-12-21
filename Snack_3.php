@@ -60,6 +60,7 @@ var_dump($data);
 <body>
 <div>
 <?php
+
   for($j=0; $j < count($posts); $j++ ){
 
     for($i=0; $i< count($posts[$data[$j]]); $i++){
@@ -76,30 +77,23 @@ var_dump($data);
 
     }
   }
-  // for($i=0; $i< count($posts['10/02/2019']); $i++){
-  //   echo $data[1];
-  //   echo ". ";
-  //   echo $posts["10/02/2019"][$i]["title"];
-  //   echo ": ";
-  //   echo $posts["10/02/2019"][$i]["author"];
-  //   echo ". ";
-  //   echo " - ";
-  //   echo $posts["10/02/2019"][$i]["text"];
-  //   echo "<br>";
-  // }
-  // for($i=0; $i< count($posts['15/05/2019']); $i++){
-  //   echo $data[2];
-  //   echo ". ";
-  //   echo $posts["15/05/2019"][$i]["title"];
-  //   echo ": ";
-  //   echo $posts["15/05/2019"][$i]["author"];
-  //   echo ". ";
-  //   echo " - ";
-  //   echo $posts["15/05/2019"][$i]["text"];
-  //   echo "<br>";
-   
-  // }
+  
   ?>
+</div>
+
+<div>
+    <?php foreach($posts as $key => $post){?>
+    <h2><?php echo $key?></h2>
+    <ul>
+        <?php foreach($post as $value){?>
+        <li>
+            <div class=""><?php echo $value["title"]?> - <?php echo $value["author"]?></div>
+            <p class=""><?php echo $value["text"]?></p>
+        </li>
+        <?php }?>
+    </ul>
+    <?php }?>
+
 </div>
 
 
